@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledLogo = styled.div`
 float:left;
-width :600px;
+width :300px;
 margin-top: 20px;
 height : 50px;
 `;

@@ -24,9 +24,7 @@ function Header() {
       <StyledQuick>
         <QuickMenu />
       </StyledQuick>
-      <div className="gnb">
-        <Container />
-      </div>
+      <Container />
     </StyledHeader>
   );
 }

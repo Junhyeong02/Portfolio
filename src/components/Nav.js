@@ -1,9 +1,11 @@
+import {useState} from 'react';
 import styled from 'styled-components';
+import SubMenu from './SubMenu';
 
-const MenuContets = [
+const MenuContents = [
   {
     name: "전공안내",
-    contents: ["원예생명공학전공은?", "전공역사", "찾아오시는길"],
+    contents: ["인사말", "전공역사", "찾아오시는길"],
   },
   {
     name: "교수진",
@@ -23,39 +25,53 @@ const MenuContets = [
   },
 ];
 
-function SubMenu(props) {
-  const submenus = props.submenus.map((submenu) => (
-    <li>
-      <a href="#">{submenu}</a>
-    </li>
-  ));
-
-  return (
-      <ul className = "submenu">
-          {submenus}
-      </ul>
-  );
-}
-
 const StyledNavi = styled.nav`
-width :600px;
 height : 100%;
-float:right;
 z-index :1;
+float:right;
+background-color:yellow;
 `;
 
 const StyledMenu = styled.ul`
 width :100%;
+
 margin-top: 10px;
 display :flex;
+justify-content :evenly
+
+& > li {
+  width: 140px;
+  height: 50px;
+}
+
+& > li > a{
+  font-weight: 700;    
+  font-size : 18px;   
+  line-height: 50px;
+  text-align:center;
+}
+
+& > li > a:hover{
+  font-weight:1000;
+  color:#0F0F70;
+}
+
 `;
 
+function Menu(props) {
+  const [focus, setFocus] = useState(false);
+
+  return (
+    <li>
+      <a href = "#" onMouseEnter = {() =>setFocus(true)} onMouseOut = {() =>setFocus(false)}>{props.name}</a>
+      <SubMenu submenus = {props.contents} focus = {focus}/>
+    </li>
+  );
+}
+
 function Nav() {
-  const menus = MenuContets.map((menu) => (
-      <li>
-          <a href = "#">{menu.name}</a>
-          <SubMenu submenus = {menu.contents} />
-      </li>
+  const menus = MenuContents.map((menu) => (
+    <Menu name = {menu.name} contents = {menu.contents} />
   ));
   
   return (

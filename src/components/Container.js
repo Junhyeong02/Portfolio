@@ -3,8 +3,8 @@ import Logo from "./Logo";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-width :1240px;
-height: 100%;
+width : 1240px;
+height: 85px;
 margin: auto;
 `;
 
