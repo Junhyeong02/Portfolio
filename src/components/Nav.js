@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 const MenuContets = [
   {
     name: "전공안내",
@@ -35,6 +37,19 @@ function SubMenu(props) {
   );
 }
 
+const StyledNavi = styled.nav`
+width :600px;
+height : 100%;
+float:right;
+z-index :1;
+`;
+
+const StyledMenu = styled.ul`
+width :100%;
+margin-top: 10px;
+display :flex;
+`;
+
 function Nav() {
   const menus = MenuContets.map((menu) => (
       <li>
@@ -44,11 +59,11 @@ function Nav() {
   ));
   
   return (
-    <nav className="menu">
-      <ul className="navi">
+    <StyledNavi>
+      <StyledMenu>
         {menus}
-      </ul>
-    </nav>
+      </StyledMenu>
+    </StyledNavi>
   );
 }
 
