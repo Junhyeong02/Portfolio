@@ -5,7 +5,8 @@ import styled from "styled-components";
 const Wrapper = styled.div`
 width : 1240px;
 height: 85px;
-margin: auto;
+display:flex;
+margin:0 auto;
 `;
 
 function Container() {

@@ -21,6 +21,10 @@ ${(props) => props.focus && css`
 animation :${SlideDown} 1s 0s 1 both;
 `}
 
+&:hover {
+  height :120px;
+}
+
 & >li {
     background-color: #0F0F70;
     postion:absolute;
@@ -51,9 +55,6 @@ function SubMenu(props) {
         <a href="#">{submenu}</a>
       </li>
     ));
-
-    console.log(props.focus);
-  
     return (
         <StyledSubMenu focus = {props.focus}>
             {submenus}

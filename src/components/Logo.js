@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const StyledLogo = styled.div`
-float:left;
 width :300px;
-margin-top: 20px;
-height : 50px;
+display:flex;
+height : 100%;
+align-items:center;
 `;
 
 function Logo() {

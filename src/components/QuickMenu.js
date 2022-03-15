@@ -1,45 +1,45 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const QuickMenu_Inner = styled.div`
-width :1240px;
-height :100%;
-margin :auto;
+  width: 1240px;
+  height: 100%;
 `;
 
 const ShortCut = styled.ul`
-width :210px;
-height :100%;
-margin-right :0;
-float:right;
-margin-top:10px;
-height : 100%;
-`;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 
-const StyledLi = styled.li`
-  width :70px;
-  float:left;
-
-  & > a {
-    color :#ffffff;
-    font-weight :700;
+  & >li {
+    width :80px;
+    flex: none;
+    margin :0 0 0 0 ;
   }
 
-  &:hover > a {
-    color :#0F0F70;
+  & > li > a {
+    color: #ffffff;
+    font-size :13px;
+    font-weight: 700;
+  }
+
+  & > li:hover > a {
+    color: #0f0f70;
   }
 `;
 
 function QuickMenu() {
-  const contents = ['Home', 'CONTACT', 'ENGLISH'];
+  const contents = ["HOME", "CONTACT", "ENGLISH"];
   const quick = contents.map((content) => (
-   <StyledLi><a href = "#">{content}</a></StyledLi>
+    <li>
+      <a href="#">{content}</a>
+    </li>
   ));
 
   return (
     <QuickMenu_Inner>
-      <ShortCut>
-        {quick}
-      </ShortCut>
+      <ShortCut>{quick}</ShortCut>
     </QuickMenu_Inner>
   );
 }

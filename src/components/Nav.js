@@ -26,22 +26,21 @@ const MenuContents = [
 ];
 
 const StyledNavi = styled.nav`
+width :100%;
 height : 100%;
-z-index :1;
-float:right;
-background-color:yellow;
+margin-left:300px;
 `;
 
 const StyledMenu = styled.ul`
-width :100%;
-
-margin-top: 10px;
-display :flex;
-justify-content :evenly
+height: 100%;
+display:flex;
+justify-content:end;
+align-items :center;
 
 & > li {
-  width: 140px;
+  width: 100px;
   height: 50px;
+  margin: 0 0 0 0;
 }
 
 & > li > a{
