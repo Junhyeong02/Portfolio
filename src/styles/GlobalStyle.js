@@ -19,7 +19,7 @@ body{
     width: 100vw;
     background-color:#ffffff;
     font-size: 20px;
-    
+    overflow-x:hidden;
 }
 `;
 

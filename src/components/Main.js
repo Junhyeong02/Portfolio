@@ -1,23 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const StyledImgSlide = styled.div`
-width :100vw;
-height: 700px;
-margin :auto;
+import ImgSlide from "./ImgSlide";
 
-& >a >img{
-    width :100%;
-    height :700px;
-    object-fit:cover;
-}
+const StyledMain = styled.div`
+  width: 100vw;
+  height: 648px;
+  padding-top: 121px;
 `;
 
 function Main() {
-    return (
-    <StyledImgSlide>
-        <a href = "#"><img src = "images/slide1.jpg" alt  = "이미지슬라이드" /></a>
-    </StyledImgSlide>
-    );
+  return (
+    <StyledMain>
+      <ImgSlide />
+    </StyledMain>
+  );
 }
 
 export default Main;
