@@ -9,6 +9,7 @@ width : 100%;
 height :121px;
 background-color: #ffffff;
 position : fixed;
+z-index:1;
 `;
 
 const StyledQuick = styled.div`
